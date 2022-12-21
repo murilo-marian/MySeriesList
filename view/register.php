@@ -17,6 +17,7 @@ session_destroy();
 
 <body>
     <div>
+        <?= include_once '../navbar.php' ?>
         <div class="container login-form">
             <div class="title-login mt-5 mb-4">
                 <h1>Registrar</h1>

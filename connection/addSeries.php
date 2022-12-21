@@ -40,6 +40,8 @@ if ($nome != "") {
         }
         //executar
         $stmt->execute();
+
+        header('location: ../view/topSeries.php');
     } catch (PDOException $e) {
         print('Erro  ao conectar como banco  de dados... <br>' . $e->getMessage());
         die();

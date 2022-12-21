@@ -48,35 +48,35 @@ if ($_SESSION['login'] == false) {
                                 <div class="container-fluid">
                                     <div class="row g-3">
                                         <form action="../connection/addSeries.php" class="series" id="modalSeries" method="POST">
-                                            <div class="form-floating">
+                                            <div class="mb-3 form-floating">
                                                 <input type="text" readonly class="form-control id" name="id" id="id" placeholder="id">
                                                 <label for="id" class="">ID</label>
                                             </div>
-                                            <div class="form-floating">
+                                            <div class="mb-3 form-floating">
                                                 <input required type="text" class="form-control nome" name="nome" id="nome" placeholder="Nome da Série">
                                                 <label for="nome" class="">Nome da Série</label>
                                             </div>
-                                            <div class="form-floating">
+                                            <div class="mb-3 form-floating">
                                                 <input required type="number" class="form-control temporadas" name="temporadas" id="temporadas" placeholder="Nº de Temporadas">
                                                 <label for="temporadas" class="">Nº de Temporadas</label>
                                             </div>
-                                            <div class="form-floating">
+                                            <div class="mb-3 form-floating">
                                                 <input required type="number" class="form-control episodios" name="episodios" id="episodios" placeholder="Nº de Episodios">
                                                 <label for="episodios" class="">Nº de Temporadas</label>
                                             </div>
-                                            <div class="form-floating">
+                                            <div class="mb-3 form-floating">
                                                 <input required type="date" class="form-control lancamento" name="lancamento" id="lancamento" placeholder="Data de Lançamento">
                                                 <label for="lancamento" class="">Data de Lançamento</label>
                                             </div>
-                                            <div class="form-floating">
+                                            <div class="mb-3 form-floating">
                                                 <input required type="number" class="form-control pop" name="pop" id="pop" placeholder="Valor de Popularidade">
                                                 <label for="pop" class="">Valor de Popularidade</label>
                                             </div>
-                                            <div class="form-floating">
+                                            <div class="mb-3 form-floating">
                                                 <input required type="text" class="form-control desc" name="descricao" id="descricao" placeholder="Descrição">
                                                 <label for="descricao" class="">Descrição</label>
                                             </div>
-                                            <div class="form-floating">
+                                            <div class="mb-3 form-floating">
                                                 <input required type="text" class="form-control imagePath" name="imagePath" id="imagePath" placeholder="Nome da Imagem no Diretório">
                                                 <label for="imagePath" class="">Nome da Imagem no Diretório</label>
                                             </div>

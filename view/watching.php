@@ -28,6 +28,43 @@ if ($_SESSION['login'] == false) {
         </div>
         <div>
             <div class="container">
+                <div class="search">
+                    <div class="mb-4 form-floating">
+                        <input required type="text" class="form-control pesquisa" name="pesquisa" id="pesquisa" placeholder="pesquisa">
+                        <label for="pesquisa">Pesquisa por Nome</label>
+                    </div>
+                    <script>
+                        let campo = $('#pesquisa');
+                        campo.keyup(async function() {
+                            const valor = campo.val().trim();
+
+                            if (!valor) {
+                                return;
+                            }
+
+                            let oReturn = await requestAjax({
+                                req: 'pesquisarNome',
+                                key: JSON.stringify({
+                                    valor: valor
+                                })
+                            })
+                        })
+
+                        async function requestAjax(options) {
+                            const url = 'http://localhost:3000/connection/ajax.php';
+                            const header = {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json; charset=UTF-8'
+                                },
+                                body: JSON.stringify($.extend(options, {
+                                    ajax: true
+                                }))
+                            }
+                            return await fetch(url, header).then((response) => response.json());
+                        }
+                    </script>
+                </div>
                 <div class="accordion" id="accordionExample">
                     <?php
                     foreach ($result as $series) { ?>

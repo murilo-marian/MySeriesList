@@ -16,6 +16,7 @@ session_destroy();
 </head>
 
 <body>
+    <?= include_once '../navbar.php' ?>
     <div>
         <div class="container login-form">
             <div class="title-login mt-5 mb-4">
