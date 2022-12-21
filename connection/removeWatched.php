@@ -8,7 +8,7 @@ include_once "conf.inc.php";
 try {
     $conexao = new PDO(MYSQL_DSN, DB_USER, DB_PASSWORD);
 
-    $query = 'INSERT INTO usuario_topseries(id, serieId) values (:id, :serieId)';
+    $query = 'DELETE FROM usuario_topseries WHERE id = :id AND serieId = :serieId';
 
     //preparar consulta
     $stmt = $conexao->prepare($query);
@@ -17,6 +17,7 @@ try {
     $stmt->bindValue(':serieId', $serieId);
     //executar
     $stmt->execute();
+
     header('location: ../view/watching.php');
 } catch (PDOException $e) {
     print('Erro  ao conectar como banco  de dados... <br>' . $e->getMessage());

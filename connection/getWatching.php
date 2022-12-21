@@ -6,7 +6,7 @@ try {
     $conexao = new PDO(MYSQL_DSN, DB_USER, DB_PASSWORD);
 
     //query
-    $query = 'SELECT serieId, nomeSerie, numTemporadas, numEpisodios, descricao, imagePath FROM topseries INNER JOIN usuario_topseries USING (serieId) INNER JOIN usuario USING (id) WHERE id = :id ORDER BY popularidade DESC';
+    $query = 'SELECT serieId, nomeSerie, dataLancamento, numTemporadas, numEpisodios, descricao, imagePath FROM topseries INNER JOIN usuario_topseries USING (serieId) INNER JOIN usuario USING (id) WHERE id = :id ORDER BY popularidade DESC';
 
     /* if (isset($_GET['pesquisa'])) {
         if ($_GET['pesquisa'] != '') {

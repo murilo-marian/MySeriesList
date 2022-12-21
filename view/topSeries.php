@@ -3,9 +3,11 @@
 include "../connection/getTopSeries.php";
 session_start();
 if ($_SESSION['login'] == false) {
-    header("location: login.php");
+    $_SESSION['isAdmin'] = false;
+    $_SESSION['login'] = false;
+} else {
+    $id = $_SESSION['id'];
 }
-
 ?>
 <html>
 
@@ -135,38 +137,20 @@ if ($_SESSION['login'] == false) {
                             <div class="card-body">
                                 <h5 class="card-title"><?= $series['nomeSerie']; ?></h5>
                                 <?php if ($_SESSION['isAdmin'] == true) { ?>
-                                    <a id="add" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-id="<?php echo $series['serieId']; ?>" data-bs-nome="<?php echo $series['nomeSerie']; ?>" data-bs-t="<?php echo $series['numTemporadas']; ?>" data-bs-ep="<?php echo $series['numEpisodios']; ?>" data-bs-data="<?php echo $series['dataLancamento']; ?>" data-bs-pop="<?php echo $series['popularidade']; ?>" data-bs-desc=" <?php echo $series['descricao']; ?>" data-bs-imgPath="<?php echo $series['imagePath']; ?>" data-bs-target="#exampleModal">
+                                    <a type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-id="<?php echo $series['serieId']; ?>" data-bs-nome="<?php echo $series['nomeSerie']; ?>" data-bs-t="<?php echo $series['numTemporadas']; ?>" data-bs-ep="<?php echo $series['numEpisodios']; ?>" data-bs-data="<?php echo $series['dataLancamento']; ?>" data-bs-pop="<?php echo $series['popularidade']; ?>" data-bs-desc=" <?php echo $series['descricao']; ?>" data-bs-imgPath="<?php echo $series['imagePath']; ?>" data-bs-target="#exampleModal">
                                         Alterar
                                     </a>
                                 <?php } ?>
-                                <a href="" class="btn btn-outline-primary">Adicionar</a>
+                                <?php if ($_SESSION['login'] == true) { ?>
+                                    <a href="../connection/addWatched.php?serieId=<?= $series['serieId']; ?>" class="btn btn-outline-primary">Adicionar</a>
+                                <?php } ?>
+
                             </div>
                         </div>
                     </div>
                 <?php } ?>
             </div>
         </div>
-        <script>
-            $(function() {
-                $("button#add").click(function() {
-                    $.ajax({
-                        type: "POST",
-                        url: "../connection/addWatched.php",
-                        data: {
-                            id: $id,
-                            serieId: $serieId
-                        },
-                        error: function() {
-                            alert("error");
-
-                        },
-                        success: function(data) {
-                            console.log(data);
-                        }
-                    });
-                });
-            });
-        </script>
         <footer>
 
         </footer>

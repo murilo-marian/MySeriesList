@@ -29,22 +29,22 @@ session_start();
                         <div class="carousel-item active" data-bs-interval="10000">
                             <img src="../images/carousel/Wandinha.png" class="d-block w-100 carousel-img" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
+                                <h5>Wandinha</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac velit arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;.</p>
                             </div>
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
                             <img src="../images/carousel/Jojo.png" class="d-block w-100 carousel-img" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>Some representative placeholder content for the second slide.</p>
+                                <h5>Jojo's Bizarre Adventure</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac velit arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="../images/carousel/Chiquititas.png" class="d-block w-100 carousel-img" alt="...">
                             <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
+                                <h5>Chiquititas</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac velit arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;.</p>
                             </div>
                         </div>
                     </div>
@@ -59,12 +59,52 @@ session_start();
                 </div>
             </div>
         </div>
+        <div class="container mt-5">
+            <div class="accordion" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Notícia genérica 1
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt dui at ex tincidunt vehicula. Pellentesque vulputate nunc ut metus venenatis, nec euismod libero facilisis. In sodales porttitor pulvinar. Maecenas vel eros quis dolor eleifend dictum. Vivamus egestas tristique mauris, vitae suscipit nunc aliquet in. Praesent ut mauris aliquam, euismod elit at, aliquet nibh. Suspendisse lobortis tincidunt efficitur. Phasellus ut consectetur magna.
+
+                            In vitae ex ac ligula accumsan sollicitudin a ut eros. Nulla sollicitudin nec nisl nec facilisis. Praesent vitae rhoncus justo, quis ornare metus. Cras ornare tellus viverra tempor molestie. Mauris fermentum arcu purus. Donec pretium tortor mi, et dapibus enim vehicula at. Donec faucibus augue tellus. Morbi in nibh est. Curabitur et ex nec nisl aliquet mattis.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Notícia genérica 2
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt dui at ex tincidunt vehicula. Pellentesque vulputate nunc ut metus venenatis, nec euismod libero facilisis. In sodales porttitor pulvinar. Maecenas vel eros quis dolor eleifend dictum. Vivamus egestas tristique mauris, vitae suscipit nunc aliquet in. Praesent ut mauris aliquam, euismod elit at, aliquet nibh. Suspendisse lobortis tincidunt efficitur. Phasellus ut consectetur magna.
+
+                            In vitae ex ac ligula accumsan sollicitudin a ut eros. Nulla sollicitudin nec nisl nec facilisis. Praesent vitae rhoncus justo, quis ornare metus. Cras ornare tellus viverra tempor molestie. Mauris fermentum arcu purus. Donec pretium tortor mi, et dapibus enim vehicula at. Donec faucibus augue tellus. Morbi in nibh est. Curabitur et ex nec nisl aliquet mattis.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Notícia genérica 3
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt dui at ex tincidunt vehicula. Pellentesque vulputate nunc ut metus venenatis, nec euismod libero facilisis. In sodales porttitor pulvinar. Maecenas vel eros quis dolor eleifend dictum. Vivamus egestas tristique mauris, vitae suscipit nunc aliquet in. Praesent ut mauris aliquam, euismod elit at, aliquet nibh. Suspendisse lobortis tincidunt efficitur. Phasellus ut consectetur magna.
+
+                            In vitae ex ac ligula accumsan sollicitudin a ut eros. Nulla sollicitudin nec nisl nec facilisis. Praesent vitae rhoncus justo, quis ornare metus. Cras ornare tellus viverra tempor molestie. Mauris fermentum arcu purus. Donec pretium tortor mi, et dapibus enim vehicula at. Donec faucibus augue tellus. Morbi in nibh est. Curabitur et ex nec nisl aliquet mattis.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer>
 
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    </div>
+
 </body>
 
 </html>

@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <?php
 session_start();
-include '../connection/getWatching.php'
+include '../connection/getWatching.php';
+if ($_SESSION['login'] == false) {
+    header("location: login.php");
+}
+
 ?>
 <html>
 
@@ -16,13 +20,14 @@ include '../connection/getWatching.php'
 </head>
 
 <body>
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
     <div class="bg">
         <?= include_once '../navbar.php'; ?>;
-        <div class="title mt-5">
+        <div class="title mt-5 mb-4">
             <h1>Top Series</h1>
         </div>
         <div>
-            <container class="container">
+            <div class="container">
                 <div class="accordion" id="accordionExample">
                     <?php
                     foreach ($result as $series) { ?>
@@ -33,17 +38,29 @@ include '../connection/getWatching.php'
                                 </button>
                             </h2>
                             <div id="collapse<?= $series['serieId'] ?>" class="accordion-collapse collapse collapsed" aria-labelledby="heading<?= $series['serieId'] ?>" data-bs-parent="#accordionExample">
-                                <div>
-                                    <img style="width: 100px;" src="../images/TopSeries/<?= $series['imagePath'] ?>.png">
+                                <div style="display: inline-block;">
+                                    <img style="width: 100px; margin:8px;" src="../images/TopSeries/<?= $series['imagePath'] ?>.png">
+                                </div>
+                                <div style="display: inline-block;" class="accordion-body">
+                                    <strong><?= $series['descricao'] ?></strong>
+                                </div>
+                                <div style="display: inline-block;" class="accordion-body">
+                                    <strong>Temporadas: <?= $series['numTemporadas'] ?></strong>
+                                </div>
+                                <div style="display: inline-block;" class="accordion-body">
+                                    <strong>Episódios: <?= $series['numEpisodios'] ?></strong>
+                                </div>
+                                <div style="display: inline-block;" class="accordion-body">
+                                    <strong>Lançamento: <?= $series['dataLancamento'] ?></strong>
                                 </div>
                                 <div class="accordion-body">
-                                    <strong><?= $series['descricao'] ?></strong>
+                                    <a href="../connection/removeWatched.php?serieId=<?= $series['serieId']; ?>" id=" remove" class="btn btn-danger">Remover</a>
                                 </div>
                             </div>
                         </div>
                     <?php } ?>
                 </div>
-            </container>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>

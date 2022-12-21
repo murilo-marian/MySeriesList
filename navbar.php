@@ -17,12 +17,14 @@ $login = false;
                 <li class="nav-item">
                     <a class="nav-link" href="../view/topSeries.php">Top Series</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../view/watching.php">Assistindo</a>
-                </li>
+                <?php if ($_SESSION['login'] == true) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../view/watching.php">Assistindo</a>
+                    </li>
+                <?php } ?>
             </ul>
             <div class="d-flex">
-                <?php if ($login == false) { ?>
+                <?php if ($_SESSION['login'] == false) { ?>
                     <a href="../view/login.php" class="text-white btn">Login</a>
                 <?php } else { ?>
                     <a href="../view/login.php" class="text-white btn">Logout</a>

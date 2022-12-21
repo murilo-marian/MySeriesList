@@ -1,0 +1,21 @@
+.login-form {
+    width: 25%;
+    justify-content:center;
+}
+
+@media (max-width: 1200px) {
+    .login-form {
+        width: 60%;
+    }
+}
+@media (max-width: 800px) {
+    .login-form {
+        width: 80%;
+    }
+}
+
+
+.title-login h1 {
+    color: white;
+    font-weight: 500;
+}
