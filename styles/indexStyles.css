@@ -1,0 +1,26 @@
+.carousel-bg {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #3c4467;
+
+}
+
+.carousel-container {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.carousel-content {
+    width: 50%;
+}
+
+@media (max-width: 600px) {
+    .carousel-content {
+        width: 100%;
+    }
+}
+
+.carousel-img {
+    filter: blur(3px);
+}

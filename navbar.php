@@ -1,4 +1,5 @@
 <?php
+$login = false;
 ?>
 <nav class="navbar navbar-dark bg-dark fixed-top shadow-sm navbar-expand-lg bg-light">
     <div class="container-fluid">
@@ -21,7 +22,11 @@
                 </li>
             </ul>
             <div class="d-flex">
-                <a class="text-white btn">Logout</a>
+                <?php if ($login == false) { ?>
+                    <a href="../view/login.php" class="text-white btn">Login</a>
+                <?php } else { ?>
+                    <a href="../view/login.php" class="text-white btn">Logout</a>
+                <?php } ?>
             </div>
         </div>
     </div>

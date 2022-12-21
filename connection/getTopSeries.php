@@ -6,7 +6,7 @@ try {
     $conexao = new PDO(MYSQL_DSN, DB_USER, DB_PASSWORD);
 
     //query
-    $query = 'SELECT serieId, nomeSerie, numTemporadas, numEpisodios, dataLancamento, descricao FROM topseries ORDER BY popularidade DESC';
+    $query = 'SELECT * FROM topseries ORDER BY popularidade DESC';
 
     /* if (isset($_GET['pesquisa'])) {
         if ($_GET['pesquisa'] != '') {
